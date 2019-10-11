@@ -3,5 +3,11 @@
         {
             "name": "Admin", "email": "olumajasegun@gmail.com", "password": "maja84maja", "role": "admin", "id": 1 
         }
+    ],
+
+    "car": [
+        {
+            "name": "Toyota", "model": "Camry", "year": "2005", "price": 1700000, "author": "Admin", "author_id": 1, "id": 1
+        }
     ]
 }
