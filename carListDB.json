@@ -9,7 +9,7 @@
         {
             "name": "Toyota", "model": "Camry", "year": "2005", "price": 2700000, 
             "description": "This is a brand new black color Toyota Camry 2005 model(3.5XLE series) with leather interior./n It uses patrol engin and has 1000km mileage", 
-            "condition": "Brand New", "author": "Admin", "author_id": 1, "id": 1
+            "condition": "Brand New", "author": "Admin", "author_id": 1, "location": "Lagos", "id": 1
         }
     ]
 }
