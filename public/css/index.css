@@ -1,8 +1,62 @@
 #navs{
-    background-color:#343a40;
+    background-color:#060405;
+    
 }
+.navbar-brand{padding-top: 0px  !important; padding-bottom: 0px !important;}
+.navbar{background-color:#060405 !important; padding: 0px !important;}
+
 body{
-    margin: auto; padding: auto;
+    margin: auto; padding: auto; background-color: #f5f5f5; color: #343a40;
 }
 #carouse{margin: 0px;}
 #carouse .col-12{margin: 0px; padding: 0px;}
+
+#brand{margin-top: 1.25em; text-align: center;width: 100%; height: 20em;}
+
+
+
+#ulBrand{
+    list-style-type: none; width: 100%;
+     padding-top: 1.25em;
+}
+#ulBrand li{
+    display: inline; padding: 1.25em;
+    max-height: 120px; text-align: center;
+}
+
+#divpromise{width: 100%; height: 20em; text-align: center; }
+
+#divpromise ul{list-style: none; margin-top: 20px;}
+
+#promise{ background-color: #141e3b; width: 58%;
+    color: #fff; font-size: 25px; margin: auto;
+}
+
+#rowround{padding-top: 20px;}
+
+.divround{width: 20.25rem; height: 10.25rem; color: #343a40;
+     margin: auto; text-align: center;
+}
+
+.imgpromise{width: 5.25rem; height: 5.25rem; margin: auto;
+    background-color: #141e3b;  text-align: center;
+}
+.imgpromise span{font-size: 50px; color: #f5f5f5; font-weight: bold;}
+
+#foot{
+    height: 100px; background-color: #343a40; color: #f5f5f5; text-align: center; 
+    width: 100%; padding-top: 30px;
+}
+#foot .row{margin: 0px;}
+
+#foot ul{list-style: none; margin: 0px; padding: 0px}
+
+#foot ul li{display: inline;}
+
+#socialMedia{font-size: 2rem;list-style:none;}
+
+#socialMedia li{ display: inline; padding-left: 30px;}
+
+
+
+
