@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/carList.css">
+    <script src="https://kit.fontawesome.com/bdf99cea4a.js" crossorigin="anonymous"></script>
+    <script>
+        if(sessionStorage.getItem('person') === null){window.location.href = 'http://localhost:3000/logIn.html'}
+    </script>
+    <title>List Of Cars</title>
+
+  </head>
+  <body>
+
+        <div class="container-fluid">
+                <div  id="navs" class="row">
+                  <div class="col-2"></div>
+                  <div class="col-9 col-offset-1">
+                      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                          <a class="navbar-brand pr-5" href="#"><img src="image/logo2.png" style="width: 100px; height: 90px;" class="d-inline-block align-center" alt="logo"></a>
+                          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+                        
+                          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                              <li class="nav-item">
+                                <a class="nav-link" href="carList.html">Explore</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">About Us</a>
+                              </li>
+                             
+                              <li class="nav-item">
+                                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Contact</a>
+                              </li>
+                            </ul>
+                            <ul class="navbar-nav">
+                                    <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                              <i id="imgperson" class="fas fa-user-circle"></i> <span id="navPerson"></span>
+                                            </a>
+                                            <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                              <a class="nav-item dropdown-item" href="#">Profile</a>
+                                              <a class="dropdown-item" href="userCars.html">Cars Created</a>
+                                             <!-- <div class="dropdown-divider"></div>-->
+                                              <a id="signout" class="dropdown-item" href="#">SignOut</a>
+                                            </div>
+                                    </li>
+                                <!--<li id="reg" class="nav-item">
+                                    <a class="nav-link" href="register.html" tabindex="-1" aria-disabled="true">Register</a>
+                                  </li>
+                                  <li class="nav-item active">
+                                      <a class="nav-link" href="index.html" tabindex="-1" aria-disabled="true">Sign out<span class="sr-only">(current)</span></a>
+                                    </li>-->
+                            </ul>
+                          </div>
+                        </nav>
+                  </div>
+              </div>
+              </div>
+
+              <div id="banner" class="row">
+                <div class="col-1"></div>
+                <div class="col-10">
+                    <div>
+                        <img src="image/cars/banner.jpg" alt="Banner" class="img-fluid" style="width: 100%;" >
+                      </div>
+                </div>
+                <div class="col-1"></div>
+              </div>
+
+              
+
+              <div id="car-row" class="row">
+
+                <div class="col-1"></div>
+                <div id="sideMenu" class="col-2">
+                  <button id="user-menu" type="button" class="btn btn-block"><i class="far fa-minus-square"></i>  <span>User Menu</span></button>
+                  <div id="divlist">
+                    <ul>
+                      <li><a href="carList.html">View All Cars</a></li>
+                      <li><a href="userCars.html">View My Cars</a></li>
+                      <li><a href="#" data-toggle="modal" data-target="#carModal">Create New Car</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-8">
+                    <div>
+
+                        <table class="table">
+                            
+                            <tbody id="tbody">
+                              
+                            </tbody>
+                          </table>
+
+                    </div>
+                </div>
+                <div class="col-1"></div>
+
+              </div>
+
+              <div class="modal fade" id="carModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Create New Car</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    
+                    <div class="modal-body">
+                      <form >
+                          <div id="wrong" class="alert alert-danger" role="alert">
+                                Please fill all the fields.
+                            </div>
+
+                        <div class="form-group">
+                          <label for="carBrand" class="col-form-label">Car Brand:</label>
+                          <input type="text" class="form-control" id="carBrand" placeholder="Enter Car Brand">
+                        </div>
+                        <div class="form-group">
+                          <label for="carModel" class="col-form-label">Car Model:</label>
+                          <input type="text" class="form-control" id="carModel" placeholder="Enter Car Model">
+                        </div>
+                        <div class="form-group">
+                          <label for="carYear" class="col-form-label">Year Manufacture:</label>
+                          <input type="number" class="form-control" id="carYear" placeholder="Enter Year">
+                        </div>
+                        <div class="form-group">
+                          <label for="carConditon" class="col-form-label">Car Condition:</label>
+                          <input type="text" class="form-control" id="carCondition" placeholder="Brand new, Foreign used or Locally used">
+                        </div>
+                        <div class="form-group">
+                          <label for="carPrice" class="col-form-label">Price:</label>
+                          <input type="number" class="form-control" id="carPrice" placeholder="Enter Price (Naira)">
+                        </div>
+                        <div class="form-group">
+                          <label for="description" class="col-form-label">Car Description:</label>
+                          <textarea class="form-control" id="description"></textarea>
+                        </div>
+                        <div class="form-group">
+                          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                          <button class="btn btn-primary" type="button" id="createbtn">Submit</button>
+                        </div>
+                      </form>
+                    </div>
+                  <!--  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>-->
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal fade" id="updateModal" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title">Create New Car</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        
+                        <div class="modal-body">
+                          <form >
+                              <div id="wrong" class="alert alert-danger" role="alert">
+                                    Please fill all the fields.
+                                </div>
+    
+                            <div class="form-group">
+                              <label for="carBrand" class="col-form-label">Car Brand:</label>
+                              <input type="text" class="form-control" id="updateBrand">
+                            </div>
+                            <div class="form-group">
+                              <label for="carModel" class="col-form-label">Car Model:</label>
+                              <input type="text" class="form-control" id="updateModel">
+                            </div>
+                            <div class="form-group">
+                              <label for="carYear" class="col-form-label">Year Manufacture:</label>
+                              <input type="number" class="form-control" id="updateYear">
+                            </div>
+                            <div class="form-group">
+                              <label for="carConditon" class="col-form-label">Car Condition:</label>
+                              <input type="text" class="form-control" id="updateCondition">
+                            </div>
+                            <div class="form-group">
+                              <label for="carPrice" class="col-form-label">Price:</label>
+                              <input type="number" class="form-control" id="updatePrice">
+                            </div>
+                            <div class="form-group">
+                              <label for="description" class="col-form-label">Car Description:</label>
+                              <textarea class="form-control" id="updatedescription"></textarea>
+                            </div>
+                            <div class="form-group">
+                              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                              <button class="btn btn-primary" type="button" id="updatebtn">Update</button>
+                            </div>
+                          </form>
+                        </div>
+                      <!--  <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>-->
+                      </div>
+                    </div>
+                  </div>
+
+                  <div id="deleteModal" class="modal" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title">Modal title</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                                <div id="deletePix"></div>
+                              <p id="deleteMsg"></p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                              <button id="deleted-btn" type="button" class="btn btn-primary">Yes</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+              <footer id="foot">
+
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-4">
+                        <div>Copyright &copy; 2019. All right reserved.</div>
+                    </div>
+                       <div class="col-6 offset-col-1">
+                          <ul id="socialMedia">
+                              <li><a href="http://www.facebook.com"><i class="fab fa-facebook" title="Facebook" data-toggle="tooltip" data-placement="top"></i></a></li>
+                              <li><a href="http://www.plus.google.com"><i class="fab fa-google-plus" title="Google+" data-toggle="tooltip" data-placement="top"></i></a></li>
+                              <li><a href="http://www.instagram.com"><i class="fab fa-instagram" title="Instagram" data-toggle="tooltip" data-placement="top"></i></a></li>
+                              <li><a href="http://www.twitter.com"><i class="fab fa-twitter-square" title="Twitter" data-toggle="tooltip" data-placement="top"></i></a></li>
+                              <li><a href="http://www.linkedIn.com"><i class="fab fa-linkedin" title="LinkedIn" data-toggle="tooltip" data-placement="top"></i></a></li>
+                            </ul>
+                    </div>
+                  </div>
+        
+            </footer>
+
+              <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/userCars.js"></script>
+    <script src="js/signOut.js"></script>
+  </body>
+</html>

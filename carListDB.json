@@ -13,20 +13,71 @@
       "password": "123456",
       "role": "user",
       "id": 2
+    },
+    {
+      "name": "Patience",
+      "email": "patienceosutuyi@gmail.com",
+      "password": "osuntuyi",
+      "role": "user",
+      "id": 3
     }
   ],
   "car": [
     {
-      "name": "Toyota",
-      "model": "Camry",
-      "year": "2005",
-      "price": 2700000,
-      "description": "This is a brand new black color Toyota Camry 2005 model(3.5XLE series) with leather interior./n It uses patrol engin and has 1000km mileage",
+      "name": "Mercedes Benz",
+      "model": "E300 RWD Sedan",
+      "year": "2019",
+      "price": 10000000,
+      "description": "It's a brand new red color Mercedes Benz E300 RWD Sedan model with leather interior. It uses patrol engin and has 1000km mileage",
       "condition": "Brand New",
-      "author": "Admin",
-      "author_id": 1,
-      "location": "Lagos",
+      "author_id": "2",
+      "image": "mercedes benz-e300-rwd-sedan-2019",
       "id": 1
+    },
+    {
+      "name": "Toyota Corolla",
+      "model": "LE",
+      "year": "2005",
+      "price": 1700000,
+      "description": "This is a foreign used silver color Toyota Corolla 2005 model(LE series) with cotton interior. It uses patrol engin and has 1000km mileage",
+      "condition": "Foreign Used",
+      "author_id": "2",
+      "image": "toyota corolla-le-2005",
+      "id": 2
+    },
+    {
+      "name": "BMW",
+      "model": "B7",
+      "year": "2014",
+      "price": "1500000",
+      "description": "This is a foreign used blue BMW B7 Series 2014 saloon car, it has leather interior, uses petrol engine and has mileage of 2000 km.",
+      "condition": "Foreign Used",
+      "author_id": "3",
+      "image": "bmw-b7-2014",
+      "id": 3
+    },
+    {
+      "name": "Honda",
+      "model": "Accord",
+      "year": "2008",
+      "price": "800000",
+      "description": "This is a locally used silver color Honda Accord 2008 model, it \n has cotton interior, uses patrol engine and has mileage 500 km",
+      "condition": "Locally Used",
+      "author_id": "3",
+      "image": "honda-accord-2008",
+      "id": 4
+    },
+    {
+      "name": "Audi",
+      "model": "se300",
+      "year": "2001",
+      "price": "500000",
+      "description": "It is locally with silver color and used petrol engine. it has 1000 km mileage.",
+      "condition": "Locally Used",
+      "author_id": "2",
+      "image": "default.jpg",
+      "id": 5
     }
+    
   ]
 }

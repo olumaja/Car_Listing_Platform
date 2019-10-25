@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/carList.css">
+    <script src="https://kit.fontawesome.com/bdf99cea4a.js" crossorigin="anonymous"></script>
+    <script>
+        if(sessionStorage.getItem('person') === null){window.location.href = 'http://localhost:3000/logIn.html'}
+    </script>
+    <title>List Of Cars</title>
+
+  </head>
+  <body>
+
+        <div class="container-fluid">
+                <div  id="navs" class="row">
+                  <div class="col-2"></div>
+                  <div class="col-9 col-offset-1">
+                      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                          <a class="navbar-brand pr-5" href="#"><img src="image/logo2.png" style="width: 100px; height: 90px;" class="d-inline-block align-center" alt="logo"></a>
+                          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+                        
+                          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                              <li class="nav-item">
+                                <a class="nav-link" href="carList.html">Explore</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">About Us</a>
+                              </li>
+                             
+                              <li class="nav-item">
+                                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Contact</a>
+                              </li>
+                            </ul>
+                            <ul class="navbar-nav">
+                                    <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                              <i id="imgperson" class="fas fa-user-circle"></i> <span id="navPerson"></span>
+                                            </a>
+                                            <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                              <a class="nav-item dropdown-item" href="#">Profile</a>
+                                              <a class="dropdown-item" href="userCars.html">Cars Created</a>
+                                             <!-- <div class="dropdown-divider"></div>-->
+                                              <a id="signout" class="dropdown-item" href="#">SignOut</a>
+                                            </div>
+                                    </li>
+                                <!--<li id="reg" class="nav-item">
+                                    <a class="nav-link" href="register.html" tabindex="-1" aria-disabled="true">Register</a>
+                                  </li>
+                                  <li class="nav-item active">
+                                      <a class="nav-link" href="index.html" tabindex="-1" aria-disabled="true">Sign out<span class="sr-only">(current)</span></a>
+                                    </li>-->
+                            </ul>
+                          </div>
+                        </nav>
+                  </div>
+              </div>
+              </div>
+
+              <div id="banner" class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <div>
+                            <img src="image/cars/banner.jpg" alt="Banner" class="img-fluid" style="width: 100%;" >
+                          </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+
+              <div id="backrow" class="row">
+                  <div class="col-3"></div>
+                  <div class="col-6"><a href='http://localhost:3000/carList.html'><span><i class="fas fa-angle-double-left"></i> Back</span></a></div>
+                  <div class="col-3"></div>
+              </div>
+
+              <div>
+
+                    <table class="table">
+                        
+                        <tbody id="tbody">
+                          
+                        </tbody>
+                      </table>
+
+                </div>
+
+              <footer id="foot">
+
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-4">
+                            <div>Copyright &copy; 2019. All right reserved.</div>
+                        </div>
+                           <div class="col-6 offset-col-1">
+                              <ul id="socialMedia">
+                                  <li><a href="http://www.facebook.com"><i class="fab fa-facebook" title="Facebook" data-toggle="tooltip" data-placement="top"></i></a></li>
+                                  <li><a href="http://www.plus.google.com"><i class="fab fa-google-plus" title="Google+" data-toggle="tooltip" data-placement="top"></i></a></li>
+                                  <li><a href="http://www.instagram.com"><i class="fab fa-instagram" title="Instagram" data-toggle="tooltip" data-placement="top"></i></a></li>
+                                  <li><a href="http://www.twitter.com"><i class="fab fa-twitter-square" title="Twitter" data-toggle="tooltip" data-placement="top"></i></a></li>
+                                  <li><a href="http://www.linkedIn.com"><i class="fab fa-linkedin" title="LinkedIn" data-toggle="tooltip" data-placement="top"></i></a></li>
+                                </ul>
+                        </div>
+                      </div>
+            
+                </footer>
+    
+                  <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="js/cargallery.js"></script>
+        <script src="js/signOut.js"></script>
+
+    </body>
+</html>

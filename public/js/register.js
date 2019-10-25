@@ -85,7 +85,7 @@ $(document).ready(function(){
                         $('#wrong').hide();
                         $('#correct').html("Success! Please sign in");
                         $('#correct').show();
-                        //$('#regModal').modal('hide');
+                       
                     })
         
         
