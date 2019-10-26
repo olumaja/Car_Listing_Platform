@@ -30,8 +30,15 @@ $(document).ready(function(){
                     }
 
                 if(validity){
-                    
-                            window.location.href = "http://localhost:3000/carList.html"
+                           let someone = sessionStorage.getItem('person')
+                           let somedata = JSON.parse(someone);
+                           if(somedata.role == 'user'){
+                             window.location.href = "http://localhost:3000/carList.html"
+                           }
+                           else if(somedata.role == 'admin'){
+                            window.location.href = "http://localhost:3000/adminusers.html"
+                           }
+                            
 
                     }
 
