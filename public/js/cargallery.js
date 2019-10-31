@@ -3,6 +3,9 @@ $(document).ready(function(){
 if(sessionStorage.getItem('myCar') == null){window.location.href = 'http://localhost:3000/userCars.html'}
 else{
 
+    let userData = sessionStorage.getItem('person');
+    let navPerson = JSON.parse(userData);
+    $('#navPerson').text(navPerson.name);
     let mydata = sessionStorage.getItem('myCar');
     let onecar = JSON.parse(mydata);
 

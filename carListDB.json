@@ -20,6 +20,13 @@
       "password": "osuntuyi",
       "role": "user",
       "id": 3
+    },
+    {
+      "name": "Tega",
+      "email": "kaffyfashola@yahoo.com",
+      "password": "tega",
+      "role": "user",
+      "id": 4
     }
   ],
   "car": [
@@ -42,17 +49,17 @@
       "description": "This is a foreign used silver color Toyota Corolla 2005 model(LE series) with cotton interior. It uses patrol engin and has 1000km mileage",
       "condition": "Foreign Used",
       "author_id": "2",
-      "image": "toyota corolla-le-2005",
+      "image": "toyota-corolla le-2005",
       "id": 2
     },
     {
       "name": "BMW",
-      "model": "B7",
+      "model": "B7 Series",
       "year": "2014",
-      "price": "1500000",
-      "description": "This is a foreign used blue BMW B7 Series 2014 saloon car, it has leather interior, uses petrol engine and has mileage of 2000 km.",
+      "price": "1800000",
+      "description": "This is a foreign used blue color BMW B7 Series 2014 model. It has a leather interior, uses petrol engine and has 1700 km mileage.",
       "condition": "Foreign Used",
-      "author_id": "3",
+      "author_id": 3,
       "image": "bmw-b7-2014",
       "id": 3
     },
@@ -60,33 +67,33 @@
       "name": "Honda",
       "model": "Accord",
       "year": "2008",
-      "price": "800000",
-      "description": "This is a locally used silver color Honda Accord 2008 model, it \n has cotton interior, uses patrol engine and has mileage 500 km",
-      "condition": "Locally Used",
-      "author_id": "3",
+      "price": "1500000",
+      "description": "This is a foreign used silver color Honda Accord 2008 model. It has a cotton interior, uses petrol engine and has 1000 km mileage.",
+      "condition": "Foreign Used",
+      "author_id": 3,
       "image": "honda-accord-2008",
       "id": 4
     },
     {
-      "name": "Audi",
-      "model": "se300",
-      "year": "2001",
-      "price": "500000",
-      "description": "It is locally with silver color and used petrol engine. it has 1000 km mileage.",
-      "condition": "Locally Used",
-      "author_id": "2",
-      "image": "default.jpg",
+      "name": "Nissan",
+      "model": "Vmotion",
+      "year": "2019",
+      "price": "13000000",
+      "description": "This is a brand new classic silver color Nissan Vmotion2.0 2019 model. It has a leather interior, uses petrol engine and has 700 km mileage.",
+      "condition": "Brand New",
+      "author_id": 3,
+      "image": "nissan-vmotion-2019",
       "id": 5
     },
     {
-      "name": "Honda",
-      "model": "accord",
-      "year": "2008",
-      "price": "800000",
-      "description": "It is locally with silver color and used petrol engine. it has 1000 km mileage.",
-      "condition": "Locally Used",
-      "author_id": "3",
-      "image": "honda-accord-2008",
+      "name": "Lexus",
+      "model": "LS 460",
+      "year": "2012",
+      "price": "1500000",
+      "description": "This is a foreign used silver color Lexus LS 460 2012 model with leather interior. It uses patrol engine and has 1000 km mileage.",
+      "condition": "Foreign Used",
+      "author_id": "4",
+      "image": "lexus-ls 460-2012",
       "id": 6
     }
   ]

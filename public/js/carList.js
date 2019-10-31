@@ -67,7 +67,7 @@ $(document).ready(function(){
                 if(arrPix.includes(pix)){
                     image = pix;
                 }else{
-                    image = 'default.jpg';
+                    image = 'default';
                 }
 
                 $.ajax({
@@ -101,6 +101,18 @@ $(document).ready(function(){
 
                     $('#carModal').modal('hide');
 
+                    //This is the view more button function
+                    $('.view-btn').on('click', (e) =>{
+                        let viewId = e.target.id.split('view-').join('');
+                        
+                        $.ajax({
+                            url: `http://localhost:3000/car/${viewId}`,
+                            method: 'get'
+                        }).done((e) =>{
+                            sessionStorage.setItem('myCar', JSON.stringify(e));
+                            window.location.href = 'http://localhost:3000/cargallery.html'
+                        })
+                    })
 
                 })
 
