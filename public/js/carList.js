@@ -33,14 +33,16 @@ $(document).ready(function(){
             //This is the view more button function
             $('.view-btn').on('click', (e) =>{
                 let viewId = e.target.id.split('view-').join('');
+
+                gallery(viewId);
                 
-                $.ajax({
-                    url: `http://localhost:3000/car/${viewId}`,
-                    method: 'get'
-                }).done((e) =>{
-                    sessionStorage.setItem('myCar', JSON.stringify(e));
-                    window.location.href = 'http://localhost:3000/cargallery.html'
-                })
+                // $.ajax({
+                //     url: `http://localhost:3000/car/${viewId}`,
+                //     method: 'get'
+                // }).done((e) =>{
+                //     sessionStorage.setItem('myCar', JSON.stringify(e));
+                //     window.location.href = 'http://localhost:3000/cargallery.html'
+                // })
             })
         })
         
@@ -104,14 +106,8 @@ $(document).ready(function(){
                     //This is the view more button function
                     $('.view-btn').on('click', (e) =>{
                         let viewId = e.target.id.split('view-').join('');
+                        gallery(viewId);
                         
-                        $.ajax({
-                            url: `http://localhost:3000/car/${viewId}`,
-                            method: 'get'
-                        }).done((e) =>{
-                            sessionStorage.setItem('myCar', JSON.stringify(e));
-                            window.location.href = 'http://localhost:3000/cargallery.html'
-                        })
                     })
 
                 })
@@ -121,6 +117,17 @@ $(document).ready(function(){
             }
             
         })
+
+        function gallery(viewId){
+                
+                $.ajax({
+                    url: `http://localhost:3000/car/${viewId}`,
+                    method: 'get'
+                }).done((e) =>{
+                    sessionStorage.setItem('myCar', JSON.stringify(e));
+                    window.location.href = 'http://localhost:3000/cargallery.html'
+                })
+        }
 
     }
 })

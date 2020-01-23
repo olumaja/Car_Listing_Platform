@@ -34,23 +34,12 @@
       "name": "Mercedes Benz",
       "model": "E300 RWD Sedan",
       "year": "2019",
-      "price": 10000000,
-      "description": "It's a brand new red color Mercedes Benz E300 RWD Sedan model with leather interior. It uses patrol engin and has 1000km mileage",
+      "price": "10000000",
+      "description": "It's a brand new red color Mercedes Benz E300 RWD Sedan model with leather interior. It uses patrol engin and has 500km mileage",
       "condition": "Brand New",
-      "author_id": "2",
+      "author_id": 2,
       "image": "mercedes benz-e300-rwd-sedan-2019",
       "id": 1
-    },
-    {
-      "name": "Toyota Corolla",
-      "model": "LE",
-      "year": "2005",
-      "price": 1700000,
-      "description": "This is a foreign used silver color Toyota Corolla 2005 model(LE series) with cotton interior. It uses patrol engin and has 1000km mileage",
-      "condition": "Foreign Used",
-      "author_id": "2",
-      "image": "toyota-corolla le-2005",
-      "id": 2
     },
     {
       "name": "BMW",
@@ -86,15 +75,37 @@
       "id": 5
     },
     {
-      "name": "Lexus",
-      "model": "LS 460",
-      "year": "2012",
-      "price": "1500000",
-      "description": "This is a foreign used silver color Lexus LS 460 2012 model with leather interior. It uses patrol engine and has 1000 km mileage.",
+      "name": "Toyota",
+      "model": "Corolla LE",
+      "year": "2005",
+      "price": "1700000",
+      "description": "This is a foreign used silver color Toyota Corolla 2005 model(LE series) with cotton interior. It uses patrol engine and has 1000 km mileage.",
       "condition": "Foreign Used",
+      "author_id": "2",
+      "image": "toyota-corolla le-2005",
+      "id": 7
+    },
+    {
+      "name": "Mercedes Benz",
+      "model": "G63 AMG",
+      "year": "2016",
+      "price": "10000000",
+      "description": "It's a brand new black color Mercedes Benz G63 AMG 2016 model with leather interior. It uses patrol engin and has 500km mileage\"",
+      "condition": "Brand New",
+      "author_id": 3,
+      "image": "mercedes benz-g63-amg-2016",
+      "id": 8
+    },
+    {
+      "name": "Chain",
+      "model": "were",
+      "year": "1000",
+      "price": "299",
+      "description": "This is a foreign used silver color Lexus LS460 2012 model. It has a cotton interior, uses petrol engine and has 1000 km mileage.",
+      "condition": "local",
       "author_id": "4",
-      "image": "lexus-ls 460-2012",
-      "id": 6
+      "image": "default",
+      "id": 13
     }
   ]
 }
