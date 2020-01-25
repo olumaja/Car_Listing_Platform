@@ -11,7 +11,7 @@ $(document).ready(function(){
 
         if(!email || !password){
             messages = "Please enter a valid email address and password";
-            $('#wrong').html(messages);
+            $('#wrong').html(messages); //Sets the content of selected elements (including HTML markup)
             $('#wrong').show();
         }
         else if(email && password){

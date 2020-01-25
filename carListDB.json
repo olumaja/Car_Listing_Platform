@@ -90,22 +90,55 @@
       "model": "G63 AMG",
       "year": "2016",
       "price": "10000000",
-      "description": "It's a brand new black color Mercedes Benz G63 AMG 2016 model with leather interior. It uses patrol engin and has 500km mileage\"",
+      "description": "It's a brand new black color Mercedes Benz G63 AMG 2016 model with leather interior. It uses patrol engin and has 500km mileage",
       "condition": "Brand New",
       "author_id": 3,
       "image": "mercedes benz-g63-amg-2016",
       "id": 8
     },
     {
-      "name": "Chain",
-      "model": "were",
-      "year": "1000",
-      "price": "299",
-      "description": "This is a foreign used silver color Lexus LS460 2012 model. It has a cotton interior, uses petrol engine and has 1000 km mileage.",
-      "condition": "local",
+      "name": "Lexus",
+      "model": "LS 460",
+      "year": "2012",
+      "price": "1800000",
+      "description": "This is a foreign used silver color Lexus LS460 2012 model. It has a cotton interior, uses petrol engine and has 1700 km mileage.",
+      "condition": "Foreign Used",
       "author_id": "4",
-      "image": "default",
-      "id": 13
+      "image": "lexus-ls 460-2012",
+      "id": 9
+    },
+    {
+      "name": "Nissan",
+      "model": "Atimal",
+      "year": "2010",
+      "price": "700000",
+      "description": "This is a foreign used silver color Nissan Atimal 2010 model with cotton interior. It uses patrol engine and has 1000 km mileage.",
+      "condition": "Foreign Used",
+      "author_id": "4",
+      "image": "nissan-atimal-2010",
+      "id": 10
+    },
+    {
+      "name": "Audi",
+      "model": "A4",
+      "year": "2010",
+      "price": "2000000",
+      "description": "It's a brand new dark grey color Audi A4 2010 model with leather interior. It uses patrol engin and has 500km mileage",
+      "condition": "Brand New",
+      "author_id": "4",
+      "image": "audi-A4-2010",
+      "id": 11
+    },
+    {
+      "name": "Hyundai",
+      "model": "Sonata",
+      "year": "2010",
+      "price": "1800000",
+      "description": "This is a brand new red color Hyundai Sonata 2010 model with cotton interior. It uses patrol engine and has 1000 km mileage.",
+      "condition": "Brand New",
+      "author_id": "4",
+      "image": "hyundai-sonata-2010",
+      "id": 12
     }
   ]
 }

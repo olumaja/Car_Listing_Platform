@@ -83,11 +83,11 @@ $(document).ready(function(){
             let price = $('#carPrice').val();
             let description = $('#description').val();
             let author_id = userId;
-            let arrPix = ['nissan-vmotion-2019', 'mercedes benz-e300-rwd-sedan-2019', 'mercedes benz-G63 AMG-2016', 'toyota-corolla le-2005', 'nissan-atimal-2010', 'honda-accord-2008', 'bmw-b7-2014', 'lexus-ls 460-2012'];
+            let arrPix = ['nissan-vmotion-2019', 'mercedes benz-e300-rwd-sedan-2019', 'mercedes benz-G63 AMG-2016', 'toyota-corolla le-2005', 'nissan-atimal-2010', 'honda-accord-2008', 'bmw-b7-2014', 'lexus-ls 460-2012', 'hyundai-sonata-2010', 'audi-A4-2010'];
             let pix = name + '-' + model + '-' + year;
             pix = pix.toLocaleLowerCase();
             let image = '';
-
+            alert(pix);
             if(name !== "" && model !== "" && year !== "" && condition !== "" && price !== "" && description !== ""){
                 
                 $('#wrong').hide();
