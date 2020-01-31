@@ -5,10 +5,10 @@ $(document).ready(function(){
     if(sessionStorage.getItem('person') === null){window.location.href = 'http://localhost:3000/logIn.html'}
     else{
 
-        let userData = sessionStorage.getItem('person');
-        let navPerson = JSON.parse(userData);
+        const userData = sessionStorage.getItem('person');
+        const navPerson = JSON.parse(userData);
         $('#navPerson').text(navPerson.name);
-        let userId = navPerson.id;
+        const userId = navPerson.id;
         let noCar = true;
         let carCount = 0;
 
@@ -57,7 +57,7 @@ $(document).ready(function(){
 
             //This is the view more button function
             $('.view-btn').on('click', (e) =>{
-                let viewId = e.target.id.split('view-').join('');
+                const viewId = e.target.id.split('view-').join('');
                 gallery(viewId);
 
             })
@@ -65,7 +65,7 @@ $(document).ready(function(){
             //This is the edit button function for Post
             $('.edit-btn').on('click', (e) =>{
 
-                let editId = e.target.id.split('edit-').join('');
+                const editId = e.target.id.split('edit-').join('');
 
                 editCars(editId);
             })
@@ -76,14 +76,14 @@ $(document).ready(function(){
         $('#createbtn').click((e)=>{
             
 
-            let name = $('#carBrand').val();
-            let model = $('#carModel').val();
-            let year = $('#carYear').val();
-            let condition = $('#carCondition').val();
-            let price = $('#carPrice').val();
-            let description = $('#description').val();
-            let author_id = userId;
-            let arrPix = ['nissan-vmotion-2019', 'mercedes benz-e300-rwd-sedan-2019', 'mercedes benz-G63 AMG-2016', 'toyota-corolla le-2005', 'nissan-atimal-2010', 'honda-accord-2008', 'bmw-b7-2014', 'lexus-ls 460-2012', 'hyundai-sonata-2010', 'audi-A4-2010'];
+            const name = $('#carBrand').val();
+            const model = $('#carModel').val();
+            const year = $('#carYear').val();
+            const condition = $('#carCondition').val();
+            const price = $('#carPrice').val();
+            const description = $('#description').val();
+            const author_id = userId;
+            const arrPix = ['nissan-vmotion-2019', 'mercedes benz-e300-rwd-sedan-2019', 'mercedes benz-G63 AMG-2016', 'toyota-corolla le-2005', 'nissan-atimal-2010', 'honda-accord-2008', 'bmw-b7-2014', 'lexus-ls 460-2012', 'hyundai-sonata-2010', 'audi-A4-2010'];
             let pix = name + '-' + model + '-' + year;
             pix = pix.toLocaleLowerCase();
             let image = '';
@@ -129,7 +129,7 @@ $(document).ready(function(){
                     )
 
                     carCount++; //Counting the number of cars a user has
-                    console.log(carCount);
+                    //console.log(carCount);
 
                     $('#carBrand').val('');
                     $('#carModel').val('');
@@ -142,7 +142,7 @@ $(document).ready(function(){
 
                     //Delete function for Post
                     $('.del-btn').on('click', (e) =>{
-                        let delId = e.target.id.split('del-').join('');
+                        const delId = e.target.id.split('del-').join('');
                         deleteCars(delId);
                         
                     })
@@ -150,7 +150,7 @@ $(document).ready(function(){
 
                     //This is the view more button function for Post
                     $('.view-btn').on('click', (e) =>{
-                        let viewId = e.target.id.split('view-').join('');
+                        const viewId = e.target.id.split('view-').join('');
                         gallery(viewId);
                         
                     })
@@ -158,7 +158,7 @@ $(document).ready(function(){
                     //This is the edit button function for Post
                     $('.edit-btn').on('click', (e) =>{
 
-                        let editId = e.target.id.split('edit-').join('');
+                        const editId = e.target.id.split('edit-').join('');
 
                         editCars(editId);
 
@@ -196,20 +196,20 @@ $(document).ready(function(){
                     $('#updatePrice').val(e.price);
                     $('#updatedescription').val(e.description);
                     
-                    let imgPath = e.image;
+                    const imgPath = e.image;
                     $('#updateModal').modal('show');
 
                     $('#updatebtn').on('click', ()=>{
 
-                                let name = $('#updateBrand').val();
-                                let model = $('#updateModel').val();
-                                let year = $('#updateYear').val();
-                                let condition = $('#updateCondition').val();
-                                let price = $('#updatePrice').val();
-                                let description = $('#updatedescription').val();
-                                let author_id = userId;
-                                let image = imgPath;
-                                let id = editId;
+                                const name = $('#updateBrand').val();
+                                const model = $('#updateModel').val();
+                                const year = $('#updateYear').val();
+                                const condition = $('#updateCondition').val();
+                                const price = $('#updatePrice').val();
+                                const description = $('#updatedescription').val();
+                                const author_id = userId;
+                                const image = imgPath;
+                                const id = editId;
                                 
         
                                 $.ajax({
@@ -249,7 +249,7 @@ $(document).ready(function(){
                      method: 'get'
                  }).done((e) =>{
                     
-                     $('#deletePix').attr("src", `image/cars/${e.image}.jpg`);
+                     $('#deletePix').prop("src", `image/cars/${e.image}.jpg`);
                     
                      $('#deleteMsg').text(`Do you want to delete ${e.name} ${e.model} ${e.year}?`);
  

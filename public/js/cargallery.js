@@ -3,17 +3,24 @@ $(document).ready(function(){
 if(sessionStorage.getItem('myCar') == null){window.location.href = 'http://localhost:3000/userCars.html'}
 else{
 
-    let userData = sessionStorage.getItem('person');
-    let navPerson = JSON.parse(userData);
+    const userData = sessionStorage.getItem('person');
+    const navPerson = JSON.parse(userData);
     $('#navPerson').text(navPerson.name);
-    let mydata = sessionStorage.getItem('myCar');
-    let onecar = JSON.parse(mydata);
+    const mydata = sessionStorage.getItem('myCar');
+    const onecar = JSON.parse(mydata);
 
-    // $.ajax({
-    //     url: 'http://localhost:3000/car',
-    //     method: 'get',
-    // }).done((e)=>{
-    //     for(let i = 0; i < e.length; i++){
+    //This code display the front view of the current car as default image in showroom
+    $('#showroomDiv img').prop('src', `image/cars/gallery/${onecar.image}-front.jpg`);
+
+    //The following codes creates thumbnail images
+    $('#thumbPix').append(
+        `<span><img src="image/cars/gallery/${onecar.image}-s-front.jpg" id="${onecar.image}-s-front.jpg" class="img-fluid gallery"></span>
+         <span><img src="image/cars/gallery/${onecar.image}-s-back.jpg" id="${onecar.image}-s-back.jpg" class="img-fluid gallery"></span>
+         <span><img src="image/cars/gallery/${onecar.image}-s-finterior.jpg" id="${onecar.image}-s-finterior.jpg" class="img-fluid gallery"></span>
+         <span><img src="image/cars/gallery/${onecar.image}-s-binterior.jpg" id="${onecar.image}-s-binterior.jpg" class="img-fluid gallery"></span>`
+    )
+
+    //The codes below create table to display the current car and full details
             $('#tbody').append(
                 `<tr class='carlist'>
                     <td><img src='image/cars/${onecar.image}.jpg' alt=''></td>
@@ -28,7 +35,13 @@ else{
                     </td>
                 </tr>`
             )
-//         }
+
+            //This codes generate the image to display in showroom when corresponding thumbnail image is click.
+            $('.gallery').on('click', function(e){
+                let imgg = e.target.id.split('-s').join('');
+                $('#showroomDiv img').prop('src', `image/cars/gallery/${imgg}`);
+            })
+
      }
 
  })

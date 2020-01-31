@@ -38,7 +38,7 @@
       "description": "It's a brand new red color Mercedes Benz E300 RWD Sedan model with leather interior. It uses patrol engin and has 500km mileage",
       "condition": "Brand New",
       "author_id": 2,
-      "image": "mercedes benz-e300-rwd-sedan-2019",
+      "image": "mercedes benz-e300-rwd-Sedan-2019",
       "id": 1
     },
     {
@@ -112,9 +112,9 @@
       "model": "Atimal",
       "year": "2010",
       "price": "700000",
-      "description": "This is a foreign used silver color Nissan Atimal 2010 model with cotton interior. It uses patrol engine and has 1000 km mileage.",
+      "description": "This is a foreign used silver color Nissan Atimal 2010 model with leather interior. It uses patrol engine and has 1000 km mileage.",
       "condition": "Foreign Used",
-      "author_id": "4",
+      "author_id": 4,
       "image": "nissan-atimal-2010",
       "id": 10
     },
