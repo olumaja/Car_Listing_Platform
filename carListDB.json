@@ -109,7 +109,7 @@
     },
     {
       "name": "Nissan",
-      "model": "Atimal",
+      "model": "Altima",
       "year": "2010",
       "price": "700000",
       "description": "This is a foreign used silver color Nissan Atimal 2010 model with leather interior. It uses patrol engine and has 1000 km mileage.",
@@ -137,7 +137,7 @@
       "description": "This is a brand new red color Hyundai Sonata 2010 model with cotton interior. It uses patrol engine and has 1000 km mileage.",
       "condition": "Brand New",
       "author_id": "4",
-      "image": "hyundai-sonata-2010",
+      "image": "hyundai-Sonata-2010",
       "id": 12
     }
   ]
