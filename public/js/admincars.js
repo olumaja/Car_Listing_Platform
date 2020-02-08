@@ -1,7 +1,13 @@
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();
-    sessionStorage.clear();
 
+    if(sessionStorage.getItem('person') === null){window.location.href = 'http://localhost:3000/logIn.html'}
+    else{
+
+        const userData = sessionStorage.getItem('person');
+        const navPerson = JSON.parse(userData);
+        $('#navPerson').text(navPerson.name);
+        const userId = navPerson.id;
         let page = 1;
         const carsdisplay = 4;
         let maxPage = 0;
@@ -43,6 +49,78 @@ $(document).ready(function(){
                 gallery(viewId);
                 
             })
+        })
+        
+        //Post command start from here
+        $('#createbtn').click((e)=>{
+            //e.preventDefault()
+
+            const name = $('#carBrand').val();
+            const model = $('#carModel').val();
+            const year = $('#carYear').val();
+            const condition = $('#carCondition').val();
+            const price = $('#carPrice').val();
+            const description = $('#description').val();
+            const author_id = userId;
+            const arrPix = ['nissan vimotion-2019', 'mercedes benz-e300-rwd-sedan-2019', 'mercedes benz-g63-amg-2019', 'toyota corolla-le-2005', 'nissan-atimal-2010', 'honda-accord-2008', 'bmw-b7-2014', 'lexus-ls 460-2012', 'hyundai-sonata-2010', 'Audi-A4-2010'];
+            let pix = name + '-' + model + '-' + year;
+            pix = pix.toLocaleLowerCase();
+            let image = '';
+
+            if(name !== "" && model !== "" && year !== "" && condition !== "" && price !== "" && description !== ""){
+                
+                $('#wrong').hide();
+
+                if(arrPix.includes(pix)){
+                    image = pix;
+                }else{
+                    image = 'default';
+                }
+
+                $.ajax({
+                    url: 'http://localhost:3000/car',
+                    method: 'post',
+                    data: {
+                        name, model, year, price, description, condition, author_id, image
+                    }
+                }).done((e)=>{
+                    $('#tbody').append(
+                        `<tr class='carlist'>
+                            <td><img src='image/cars/${e.image}.jpg' alt=''></td>
+                            <td>
+                                <div><strong>Brand: </strong>${e.name}</div>
+                                <div><strong>Model: </strong>${e.model}</div>
+                                <div><strong>Year: </strong>${e.year}</div>
+                                <div><strong>Condition: </strong>${e.condition}</div>
+                                <div><strong>Price: </strong>${Number(e.price).toLocaleString('en-NG', { style: 'currency', currency: 'NGN' })}</div>
+                                <div><strong>Description: </strong><br>${e.description}</div>
+                                <button id="view-${e.id}" class='btn btn-outline-info view-btn'>View Gallery</button></div>
+                            </td>
+                        </tr>`
+                    )
+
+                    $('#carBrand').val('');
+                    $('#carModel').val('');
+                    $('#carYear').val('');
+                    $('#carCondition').val('');
+                    $('#carPrice').val('');
+                    $('#description').val('');
+
+                    $('#carModal').modal('hide');
+
+                    //This is the view more button function
+                    $('.view-btn').on('click', (e) =>{
+                        const viewId = e.target.id.split('view-').join('');
+                        gallery(viewId);
+                        
+                    })
+
+                })
+
+            }else{
+                $('#wrong').show();
+            }
+            
         })
 
         //This code control the previous button
@@ -149,8 +227,9 @@ $(document).ready(function(){
                     method: 'get'
                 }).done((e) =>{
                     sessionStorage.setItem('myCar', JSON.stringify(e));
-                    window.location.href = 'http://localhost:3000/gallery.html'
+                    window.location.href = 'http://localhost:3000/admincargallery.html'
                 })
         }
 
+    }
 })

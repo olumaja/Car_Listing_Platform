@@ -7,13 +7,12 @@ $(document).ready(function(){
         let userData = sessionStorage.getItem('person');
         let navPerson = JSON.parse(userData);
         $('#navPerson').text(navPerson.name);
-        //let userId = navPerson.id;
         let noCar = true;
 
         let personalData = sessionStorage.getItem('personalcars');
         let mypersonal = JSON.parse(personalData);
         let personalId = mypersonal.id;
-        //alert(personalId);
+        let dealerName = mypersonal.name;
                 
         $.ajax({
             url: 'http://localhost:3000/car',
@@ -30,11 +29,12 @@ $(document).ready(function(){
                                 <div><strong>Year: </strong><span id='years'>${e[i].year}</span></div>
                                 <div><strong>Condition: </strong><span id='condition'>${e[i].condition}</span></div>
                                 <div><strong>Price: </strong><span id='money'>${Number(e[i].price).toLocaleString('en-NG', { style: 'currency', currency: 'NGN' })}</span></div>
-                                <div><strong>Description: </strong><br><span id='describe'>${e[i].description}</span></div>
+                                <div><p><strong>Description: </strong><br><span id='describe'>${e[i].description}</span></div>
                                 <button id="view-${e[i].id}" class='btn btn-outline-info view-btn'>View Gallery</button>
                                 <button id="edit-${e[i].id}" class='btn btn-primary edit-btn'><i class="far fa-edit"></i> Edit Car</button>
                                 <button id="del-${e[i].id}" class='btn btn-danger del-btn' data-toggle="modal" data-target="#deleteModal"><i class="far fa-trash-alt"></i> Delete Car</button>
-                                </div>
+                                </p></div>
+                                <div><strong>Dealer's Names:</strong> ${dealerName}</div>
                             </td>
                         </tr>`
                     )

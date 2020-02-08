@@ -13,7 +13,7 @@
     <script>
         if(sessionStorage.getItem('person') === null){window.location.href = 'http://localhost:3000/logIn.html'}
     </script>
-    <title>List Of Users</title>
+    <title>List Of Dealers</title>
 
   </head>
   <body>
@@ -82,12 +82,12 @@
 
                 <div class="col-1"></div>
                 <div id="sideMenu" class="col-2">
-                  <button id="user-menu" type="button" class="btn btn-block"><i class="far fa-minus-square"></i>  <span>User Menu</span></button>
+                  <button id="user-menu" type="button" class="btn btn-block"><i class="far fa-minus-square"></i>  <span>Admin Menu</span></button>
                   <div id="divlist">
                     <ul>
-                      <li><a href="adminusers.html">View All Users</a></li>
+                      <li><a href="adminusers.html">View All Dealers</a></li>
                       <li><a href="admincars.html">View All Cars</a></li>
-                     <!-- <li><a href="#" data-toggle="modal" data-target="#carModal">Create New Car</a></li> -->
+                      <li><a href="#" data-toggle="modal" data-target="#carModal">Create New Car</a></li>
                     </ul>
                   </div>
                 </div>

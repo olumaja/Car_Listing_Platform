@@ -6,7 +6,6 @@ $(document).ready(function(){
         let userData = sessionStorage.getItem('person');
         let navPerson = JSON.parse(userData);
         $('#navPerson').text(navPerson.name);
-        let userId = navPerson.id;
 
         $.ajax({
             url: 'http://localhost:3000/user',
@@ -27,18 +26,15 @@ $(document).ready(function(){
                             </td>
                             <td>
                                 <!--<a id='usercars' href="userCars.html">View User Cars</a>-->
-                                <button id="view-${e[i].id}" class='btn btn-outline-info view-btn'>View User Cars</button>
+                                <button id="view-${e[i].id}" class="btn btn-outline-info view-btn">View Dealer Cars</button>
                             </td>
                             
                                 
                         </tr>`
         
                             )
-                }
+                        }
 
-                        //The count variable ensure that the serial number (SN) in get is consistence in post
-                        //count++;
-    
                     }
 
                     //This is the view more button function
@@ -46,7 +42,7 @@ $(document).ready(function(){
                         let viewId = e.target.id.split('view-').join('');
                         
                         $.ajax({
-                            url: `http://localhost:3000/car/${viewId}`,
+                            url: `http://localhost:3000/user/${viewId}`,
                             method: 'get'
                         }).done((e) =>{
                             sessionStorage.setItem('personalcars', JSON.stringify(e));

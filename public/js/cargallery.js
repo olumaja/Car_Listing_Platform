@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-if(sessionStorage.getItem('myCar') == null){window.location.href = 'http://localhost:3000/userCars.html'}
+if(sessionStorage.getItem('myCar') == null){window.location.href = 'http://localhost:3000/carList.html'}
 else{
 
     const userData = sessionStorage.getItem('person');
