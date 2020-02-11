@@ -5,6 +5,7 @@
       "email": "olumajasegun@gmail.com",
       "password": "maja84maja",
       "role": "admin",
+      "status": "unblock",
       "id": 1
     },
     {
@@ -12,6 +13,7 @@
       "email": "segun.adaramaja@solo-phone.com",
       "password": "123456",
       "role": "user",
+      "status": "unblock",
       "id": 2
     },
     {
@@ -19,6 +21,7 @@
       "email": "patienceosutuyi@gmail.com",
       "password": "osuntuyi",
       "role": "user",
+      "status": "unblock",
       "id": 3
     },
     {
@@ -26,119 +29,9 @@
       "email": "kaffyfashola@yahoo.com",
       "password": "tega",
       "role": "user",
+      "status": "block",
       "id": 4
     }
   ],
-  "car": [
-    {
-      "name": "Mercedes Benz",
-      "model": "E300 RWD Sedan",
-      "year": "2019",
-      "price": "10000000",
-      "description": "It's a brand new red color Mercedes Benz E300 RWD Sedan model with leather interior. It uses patrol engin and has 500km mileage",
-      "condition": "Brand New",
-      "author_id": 2,
-      "image": "mercedes benz-e300-rwd-Sedan-2019",
-      "id": 1
-    },
-    {
-      "name": "BMW",
-      "model": "B7 Series",
-      "year": "2014",
-      "price": "1800000",
-      "description": "This is a foreign used blue color BMW B7 Series 2014 model. It has a leather interior, uses petrol engine and has 1700 km mileage.",
-      "condition": "Foreign Used",
-      "author_id": 3,
-      "image": "bmw-b7-2014",
-      "id": 3
-    },
-    {
-      "name": "Honda",
-      "model": "Accord",
-      "year": "2008",
-      "price": "1500000",
-      "description": "This is a foreign used silver color Honda Accord 2008 model. It has a cotton interior, uses petrol engine and has 1000 km mileage.",
-      "condition": "Foreign Used",
-      "author_id": 3,
-      "image": "honda-accord-2008",
-      "id": 4
-    },
-    {
-      "name": "Nissan",
-      "model": "Vmotion",
-      "year": "2019",
-      "price": "13000000",
-      "description": "This is a brand new classic silver color Nissan Vmotion2.0 2019 model. It has a leather interior, uses petrol engine and has 700 km mileage.",
-      "condition": "Brand New",
-      "author_id": 3,
-      "image": "nissan-vmotion-2019",
-      "id": 5
-    },
-    {
-      "name": "Toyota",
-      "model": "Corolla LE",
-      "year": "2005",
-      "price": "1700000",
-      "description": "This is a foreign used silver color Toyota Corolla 2005 model(LE series) with cotton interior. It uses patrol engine and has 1000 km mileage.",
-      "condition": "Foreign Used",
-      "author_id": "2",
-      "image": "toyota-corolla le-2005",
-      "id": 7
-    },
-    {
-      "name": "Mercedes Benz",
-      "model": "G63 AMG",
-      "year": "2016",
-      "price": "10000000",
-      "description": "It's a brand new black color Mercedes Benz G63 AMG 2016 model with leather interior. It uses patrol engin and has 500km mileage",
-      "condition": "Brand New",
-      "author_id": 3,
-      "image": "mercedes benz-g63-amg-2016",
-      "id": 8
-    },
-    {
-      "name": "Lexus",
-      "model": "LS 460",
-      "year": "2012",
-      "price": "1800000",
-      "description": "This is a foreign used silver color Lexus LS460 2012 model. It has a cotton interior, uses petrol engine and has 1700 km mileage.",
-      "condition": "Foreign Used",
-      "author_id": "4",
-      "image": "lexus-ls 460-2012",
-      "id": 9
-    },
-    {
-      "name": "Nissan",
-      "model": "Altima",
-      "year": "2010",
-      "price": "700000",
-      "description": "This is a foreign used silver color Nissan Atimal 2010 model with leather interior. It uses patrol engine and has 1000 km mileage.",
-      "condition": "Foreign Used",
-      "author_id": 4,
-      "image": "nissan-atimal-2010",
-      "id": 10
-    },
-    {
-      "name": "Audi",
-      "model": "A4",
-      "year": "2010",
-      "price": "2000000",
-      "description": "It's a brand new dark grey color Audi A4 2010 model with leather interior. It uses patrol engin and has 500km mileage",
-      "condition": "Brand New",
-      "author_id": "4",
-      "image": "audi-A4-2010",
-      "id": 11
-    },
-    {
-      "name": "Hyundai",
-      "model": "Sonata",
-      "year": "2010",
-      "price": "1800000",
-      "description": "This is a brand new red color Hyundai Sonata 2010 model with cotton interior. It uses patrol engine and has 1000 km mileage.",
-      "condition": "Brand New",
-      "author_id": "4",
-      "image": "hyundai-Sonata-2010",
-      "id": 12
-    }
-  ]
+  "car": []
 }

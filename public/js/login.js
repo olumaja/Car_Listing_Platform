@@ -7,6 +7,7 @@ $(document).ready(function(){
         let password = $('#inputPassword').val();
         let email = $('#inputEmail').val().toLowerCase();
         let validity = false;
+        let block = false;
         let messages = ""
 
         if(!email || !password){
@@ -22,8 +23,10 @@ $(document).ready(function(){
 
                     for(let i = 0; i < e.length; i++){
                         if(e[i].email.includes(email) && e[i].password.includes(password)){
-                            validity = true; 
-                            sessionStorage.setItem("person",JSON.stringify(e[i]));
+                            if(e[i].status !== "block"){
+                                validity = true;
+                                sessionStorage.setItem("person",JSON.stringify(e[i]));
+                            }else{block = true;}
                             break;
                         }
                         
@@ -42,7 +45,13 @@ $(document).ready(function(){
 
                     }
 
-                    if(!validity){
+                    if(block)
+                    {
+                        messages = 'Your account has been suspended<br>please contact the admin'
+                        $('#wrong').html(messages);
+                        $('#wrong').show();
+                    }
+                    else if(!validity){
                         messages = 'Username or password is not correct!'
                         $('#wrong').html(messages);
                         $('#wrong').show();

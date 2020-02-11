@@ -5,25 +5,24 @@ $(document).ready(function(){
     $('#userForm').submit((e) =>{
         e.preventDefault();
         
-        let role = 'user';
-        let name = $('#userName').val();
+        const role = 'user';
+        const status = 'unblock';
+        const name = $('#userName').val();
     
-        let password = $('#inputPassword').val();
+        const password = $('#inputPassword').val();
     
-        let confirm = $('#confirm').val();
+        const confirm = $('#confirm').val();
 
         let matchPwd = true;
     
-        let email = $('#inputEmail').val().toLowerCase();
+        const email = $('#inputEmail').val().toLowerCase();
     
-        let eValidate = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        const eValidate = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     
         let emailStatues = eValidate.test(String(email));
     
         let uniqueUser = false;
         let messages = "";
-
-        //let emailDB = [];
     
         if(!name || name.length <= 1){
             messages = "Please enter a valid name<br>";
@@ -72,7 +71,7 @@ $(document).ready(function(){
                     $.ajax({
                         url: 'http://localhost:3000/user',
                         method: 'post',
-                        data: {name, email, password, role}
+                        data: {name, email, password, role, status}
         
                     }).done((e)=>{
         

@@ -87,7 +87,6 @@ $(document).ready(function(){
             let pix = name + '-' + model + '-' + year;
             pix = pix.toLocaleLowerCase();
             let image = '';
-            alert(pix);
             if(name !== "" && model !== "" && year !== "" && condition !== "" && price !== "" && description !== ""){
                 
                 $('#wrong').hide();
@@ -129,7 +128,6 @@ $(document).ready(function(){
                     )
 
                     carCount++; //Counting the number of cars a user has
-                    //console.log(carCount);
 
                     $('#carBrand').val('');
                     $('#carModel').val('');
@@ -264,9 +262,8 @@ $(document).ready(function(){
                              $('#deleteModal').modal('hide');
                              $(`#tr-${delId}`).fadeOut(200);
                              carCount--;  //This code decrease number of cars after each delete.
-                             console.log(carCount);
                              
-                             if(carCount < 1){   //The codes determine if user no longer has a car.
+                             if(carCount == 0){   //The codes determine if user no longer has a car.
                                 
                                 noCar = true;
                                 emptyCar();
