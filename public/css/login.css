@@ -10,6 +10,7 @@
 
 body{
     margin: auto; padding: auto; color: #343a40; background-image: url(../image/autobg1.jpg);
+    
 }
 
 .holdform{width: 100%; margin-top: 4.25em; text-align: center;
@@ -22,30 +23,30 @@ body{
 .divform hr{border-color: rgba(45, 93, 204, 0.3);}
 
 #userForm{ margin-top: 1.25em;}
-.fancy{width: 25em; border-radius: 5px; margin: auto;  margin-bottom: 10px; background-color: rgba(45, 93, 204, 0.1);
+.fancy{width: 25em; border-radius: 0.3125em; margin: auto;  margin-bottom: 0.625em; background-color: rgba(45, 93, 204, 0.1);
     color:rgba(45, 93, 204, 0.7); 
     box-shadow: 1px 1px 2px -1px #141e3b inset;
 }
-.form-row input{width: 18.75em; border: none; background: none; margin-top: 20px;}
+.form-row input{width: 18.75em; border: none; background: none; margin-top: 1.25em;}
 .form-row input:focus{border: none; background: none;}
-.form-row label{margin-top: 15px; text-align: center; font-size: 25px;}
+.form-row label{margin-top: 0.9375em; text-align: center; font-size: 1.5625em;}
 .form-row{padding-left: 0px;}
 .form-row .col-sm-2{padding-left: 0px !important; padding-right: 0px !important;}
 .form-row .col-sm-9{padding-left: 0px !important; padding-right: 0px !important;}
 #grid{width: 90%; margin: 0 auto;}
 #grid .form-check-inline{margin-right: 5rem;}
 #grid a:hover{text-decoration: none;}
-#divsignin{margin-top: 20px;}
+#divsignin{margin-top: 1.25em;}
 
 
-#output{height: 70px;}
+#output{height: 3.375em;}
 #correct{background: none !important; border: none !important; padding: 0px !important; margin-bottom: 0px !important; display: none;}
 #wrong{background: none !important; border: none !important; padding: 0px !important; margin-bottom: 0px !important; color: red; display: none;}
-.terms{font-size: 14px; color: rgba(20, 30, 59, 0.8);}
+.terms{font-size: 0.875em; color: rgba(20, 30, 59, 0.8);}
 
 
 #foot{
-    height: 100px; background-color: #343a40; color: #f5f5f5; text-align: center; 
+    height: 6.25em; background-color: #343a40; color: #f5f5f5; text-align: center; 
     width: 100%; padding-top: 1.875em;
 }
 #foot .row{margin: 0px;}

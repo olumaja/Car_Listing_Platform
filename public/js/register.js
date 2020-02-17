@@ -29,19 +29,19 @@ $(document).ready(function(){
             $('#wrong').html(messages);
             
         }
-        if(!emailStatues){
-            messages += "Please enter a valid email address<br>";
+        else if(!emailStatues){
+            messages = "Please enter a valid email address<br>";
             $('#wrong').html(messages);
             
         }
-        if(!password){
-            messages += "Please enter a valid password<br>";
+        else if(!password){
+            messages = "Please enter a valid password<br>";
             $('#wrong').html(messages);
             
         }
         else if(password !== confirm){
             matchPwd = false;
-            messages += "Password doesn't match<br>";
+            messages = "Password doesn't match<br>";
             $('#wrong').html(messages);
             
         }

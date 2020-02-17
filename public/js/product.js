@@ -45,6 +45,13 @@ $(document).ready(function(){
             })
         })
 
+        //This line of code called empty car when there is no car in the database
+        if(maxPage == 0){
+            $('#paging button:first-child').prop("disabled", true);
+            $('#paging button:nth-child(2)').prop("disabled", true);
+            emptyCar();
+        }
+
         //This code control the previous button
         $('#paging button:first-child').on('click', function(e){
             
@@ -151,6 +158,18 @@ $(document).ready(function(){
                     sessionStorage.setItem('myCar', JSON.stringify(e));
                     window.location.href = 'http://localhost:3000/gallery.html'
                 })
+        }
+
+        function emptyCar(){
+
+            $('#tbody').append(
+                `<tr id='nocars' class='carlist'>
+                    <td><img src='image/cars/noCar.jpg' alt='default car'></td>
+                    <td>
+                        <div id='divnocar'><strong>No car yet! </strong>Please create a car</div>
+                    </td>
+                </tr>`
+            )
         }
 
 })

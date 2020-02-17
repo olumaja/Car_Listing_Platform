@@ -11,24 +11,24 @@ body{
 #dropdown-menu{ background-color: rgba(6, 4, 5, 1);}
 .dropdown-item{color: rgba(255,255,255,.5) !important; border-top: thin rgba(255,255,255,.5) dotted !important;}
 .dropdown-item:hover{color: rgba(255,255,255,.8) !important; background-color: rgba(6, 4, 5, 1) !important;}
-#imgperson{font-size: 20px;}
+#imgperson{font-size: 1.25em;}
 
-#banner{padding-top: 20px; margin: 0px;}
-#backrow{margin-top: 20px; margin-right: 0px; margin-left: 0px;}
+#banner{padding-top: 1.25em; margin: 0px;}
+#backrow{margin-top: 1.25em; margin-right: 0px; margin-left: 0px;}
 
-#showroom{padding-top: 20px; margin: 0px;}
+#showroom{padding-top: 1.25em; margin: 0px;}
 #showroom .col-10{padding-left: 0px; padding-right: 0px;}
-#thumbPix{margin: 10px auto; width: 438px; height: 82px; background-color: rgba(6, 4, 5, 1); padding-top: 4px;}
-#thumbPix span{padding-left: 3px;}
+#thumbPix{margin: 10px auto; width: 27.375em; height: 5.125em; background-color: rgba(6, 4, 5, 1); padding-top: 0.25em;}
+#thumbPix span{padding-left: 0.1875em;}
 #thumbPix span img{border: #cccccc thin solid;}
-#thumbPix span img:hover{border: rgb(116, 116, 240) 2px solid; cursor: pointer;}
+#thumbPix span img:hover{border: rgb(116, 116, 240) 0.125em solid; cursor: pointer;}
 
 #tablerow{margin-right: 0px; margin-left: 0px;}
 .table tr{background-color: rgba(6, 4, 5, 1); color: rgba(255,255,255,.5);}
 
 #foot{
-    height: 100px; background-color: rgba(6, 4, 5, .9); color: #f5f5f5; text-align: center; 
-    width: 100%; padding-top: 30px;
+    height: 6.25em; background-color: rgba(6, 4, 5, .9); color: #f5f5f5; text-align: center; 
+    width: 100%; padding-top: 1.875em;
 }
 #foot .row{margin: 0px;}
 
@@ -38,4 +38,4 @@ body{
 
 #socialMedia{font-size: 2rem;list-style:none;}
 
-#socialMedia li{ display: inline; padding-left: 30px;}
+#socialMedia li{ display: inline; padding-left: 1.875em;}
