@@ -1,3 +1,11 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: auto; padding: auto; background-image: url(../image/autobg1.jpg); color: #343a40;
+}
+
 #navs{
     background-color:#060405;
     
@@ -5,9 +13,6 @@
 .navbar-brand{padding-top: 0px  !important; padding-bottom: 0px !important;}
 .navbar{background-color:#060405 !important; padding: 0px !important;}
 
-body{
-    margin: auto; padding: auto; background-image: url(../image/autobg1.jpg); color: #343a40;
-}
 #dropdown-menu{ background-color: rgba(6, 4, 5, 1);}
 .dropdown-item{color: rgba(255,255,255,.5) !important; border-top: thin rgba(255,255,255,.5) dotted !important;}
 .dropdown-item:hover{color: rgba(255,255,255,.8) !important; background-color: rgba(6, 4, 5, 1) !important;}

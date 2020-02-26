@@ -33,5 +33,61 @@
       "id": 4
     }
   ],
-  "car": []
+  "car": [
+    {
+      "name": "Honda",
+      "model": "Accord",
+      "year": "2008",
+      "price": "800000",
+      "description": "It is a foreign used silver color Honda Accord 2008 model, it has a cotton interior, uses petrol engine and has 2000 mileage.",
+      "condition": "Foreign Used",
+      "author_id": "4",
+      "image": "honda-accord-2008",
+      "id": 1
+    },
+    {
+      "name": "Lexus",
+      "model": "LS 460",
+      "year": "2012",
+      "price": "700000",
+      "description": "It is a foreign used silver color Lexus LS 460 2012 model, it has a cotton interior, uses petrol engine and has 3000km mileage.",
+      "condition": "Foreign Used",
+      "author_id": "4",
+      "image": "lexus-ls 460-2012",
+      "id": 2
+    },
+    {
+      "name": "Nissan",
+      "model": "VMotion",
+      "year": "2019",
+      "price": "15000000",
+      "description": "It is a Brand New silver color Nissan VMotion 2019 model, it has a leather interior, uses petrol engine and has 500km mileage.",
+      "condition": "Brand New",
+      "author_id": "3",
+      "image": "nissan-vmotion-2019",
+      "id": 3
+    },
+    {
+      "name": "Mercedes Benz",
+      "model": "G63 AMG",
+      "year": "2016",
+      "price": "7000000",
+      "description": "It is a Brand New black color Mercedes Benz G63 AMG 2016 model, it has a leather interior, uses petrol engine and has 500km mileage.",
+      "condition": "Brand New",
+      "author_id": "3",
+      "image": "mercedes benz-g63 amg-2016",
+      "id": 4
+    },
+    {
+      "name": "Mercedes Benz",
+      "model": "E300 RWD Sedan",
+      "year": "2019",
+      "price": "8000000",
+      "description": "It is a Brand New red color Mercedes Benz E300 RWD Sedan model, it has a leather interior, uses petrol engine and has 500km mileage.",
+      "condition": "Brand New",
+      "author_id": "3",
+      "image": "mercedes benz e300 rwd sedan-2019",
+      "id": 5
+    }
+  ]
 }

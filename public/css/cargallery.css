@@ -1,3 +1,11 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: auto; padding: auto; color: #343a40; background-image: url(../image/autobg1.jpg);
+}
+
 #navs{
     background-color:#060405;
     
@@ -5,9 +13,6 @@
 .navbar-brand{padding-top: 0px  !important; padding-bottom: 0px !important;}
 .navbar{background-color:#060405 !important; padding: 0px !important;}
 
-body{
-    margin: auto; padding: auto; color: #343a40; background-image: url(../image/autobg1.jpg);
-}
 #dropdown-menu{ background-color: rgba(6, 4, 5, 1);}
 .dropdown-item{color: rgba(255,255,255,.5) !important; border-top: thin rgba(255,255,255,.5) dotted !important;}
 .dropdown-item:hover{color: rgba(255,255,255,.8) !important; background-color: rgba(6, 4, 5, 1) !important;}
@@ -21,7 +26,7 @@ body{
 #thumbPix{margin: 10px auto; width: 27.375em; height: 5.125em; background-color: rgba(6, 4, 5, 1); padding-top: 0.25em;}
 #thumbPix span{padding-left: 0.1875em;}
 #thumbPix span img{border: #cccccc thin solid;}
-#thumbPix span img:hover{border: rgb(116, 116, 240) 0.125em solid; cursor: pointer;}
+#thumbPix span img:hover{cursor: pointer; border: rgb(116, 116, 240) 0.0625em solid;}
 
 #tablerow{margin-right: 0px; margin-left: 0px;}
 .table tr{background-color: rgba(6, 4, 5, 1); color: rgba(255,255,255,.5);}
