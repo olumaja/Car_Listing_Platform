@@ -74,7 +74,7 @@ $(document).ready(function(){
             const price = $('#carPrice').val();
             const description = $('#description').val();
             const author_id = userId;
-            const arrPix = ['nissan-vimotion-2019', 'mercedes benz e300 rwd sedan-2019', 'mercedes benz-g63 amg-2016', 'toyota corolla-le-2005', 'nissan-atimal-2010', 'honda-accord-2008', 'bmw-b7-2014', 'lexus-ls 460-2012', 'hyundai-sonata-2010', 'Audi-A4-2010'];
+            const arrPix = ['nissan-vimotion-2019', 'mercedes benz-e300 rwd sedan-2019', 'mercedes benz-g63 amg-2016', 'toyota corolla-le-2005', 'nissan-atimal-2010', 'honda-accord-2008', 'bmw-b7-2014', 'lexus-ls 460-2012', 'hyundai-sonata-2010', 'Audi-A4-2010'];
             let pix = name + '-' + model + '-' + year;
             pix = pix.toLocaleLowerCase();
             let image = '';

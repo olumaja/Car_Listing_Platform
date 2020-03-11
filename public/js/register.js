@@ -82,7 +82,7 @@ $(document).ready(function(){
                         
                         $('#wrong').html("");
                         $('#wrong').hide();
-                        $('#correct').html("Success! Please sign in");
+                        $('#correct').html("Successful! Please sign in");
                         $('#correct').show();
                        
                     })

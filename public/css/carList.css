@@ -4,6 +4,7 @@
 
 body{
     margin: auto; padding: auto; background-image: url(../image/autobg1.jpg); color: #343a40;
+    font-family: robotoregular;
 }
 
 #navs{

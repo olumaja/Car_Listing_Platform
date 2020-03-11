@@ -19,7 +19,20 @@ $(document).ready(function(){
         }).done((e)=>{
             //This code divide the total number in the database by number of items display per page
             maxPage = Math.ceil(e.length/carsdisplay);
-        });
+
+            //This line of code called empty car when there is no car in the database
+            if(maxPage == 0){
+                $('#paging button:first-child').prop("disabled", true);
+                $('#paging button:nth-child(2)').prop("disabled", true);
+                emptyCar();
+            }
+
+            //This line of code activate the next button
+            if(page < maxPage){
+                $('#paging button:nth-child(2)').prop("disabled", false);
+            }
+
+            });
         
         $.ajax({
             url: `http://localhost:3000/car?_page=${page}&_limit=${carsdisplay}`,
@@ -50,13 +63,6 @@ $(document).ready(function(){
                 
             })
         })
-
-        //This line of code called empty car when there is no car in the database
-        if(maxPage == 0){
-            $('#paging button:first-child').prop("disabled", true);
-            $('#paging button:nth-child(2)').prop("disabled", true);
-            emptyCar();
-        }
         
         //Post command start from here
         $('#createbtn').click((e)=>{

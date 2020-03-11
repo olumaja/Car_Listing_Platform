@@ -31,6 +31,14 @@
       "role": "user",
       "status": "unblock",
       "id": 4
+    },
+    {
+      "name": "Okiki",
+      "email": "olaokiki84@gmail.com",
+      "password": "olaokiki",
+      "role": "user",
+      "status": "unblock",
+      "id": 5
     }
   ],
   "car": [
@@ -83,11 +91,22 @@
       "model": "E300 RWD Sedan",
       "year": "2019",
       "price": "8000000",
-      "description": "It is a Brand New red color Mercedes Benz E300 RWD Sedan model, it has a leather interior, uses petrol engine and has 500km mileage.",
+      "description": "It is a Brand New red color Mercedes Benz E300 RWD Sedan 2019 model, it has a leather interior, uses petrol engine and has 500km mileage.",
       "condition": "Brand New",
       "author_id": "3",
-      "image": "mercedes benz e300 rwd sedan-2019",
+      "image": "mercedes benz-e300 rwd sedan-2019",
       "id": 5
+    },
+    {
+      "name": "Hyundai",
+      "model": "Sonata",
+      "year": "2010",
+      "price": "2000000",
+      "description": "It is a Brand New red color Hyundai Sonata 2010 model, it has a leather interior, uses petrol engine and has 1000km mileage.",
+      "condition": "Brand New",
+      "author_id": "1",
+      "image": "hyundai-sonata-2010",
+      "id": 6
     }
   ]
 }
