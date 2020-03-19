@@ -34,15 +34,17 @@ $(document).ready(function(){
             for(let i = 0; i < e.length; i++){
                 $('#tbody').append(
                     `<tr class='carlist'>
-                        <td><img src='image/cars/${e[i].image}.jpg' alt=''></td>
-                        <td>
+                        <td class="clearfix">
+                        <div class="carbox"><img src='image/cars/${e[i].image}.jpg' class="img-fluid" alt='${e[i].name} ${e[i].model} ${e[i].year} model'></div>
+                        <div>
                             <div><strong>Brand: </strong>${e[i].name}</div>
                             <div><strong>Model: </strong>${e[i].model}</div>
                             <div><strong>Year: </strong>${e[i].year}</div>
                             <div><strong>Condition: </strong>${e[i].condition}</div>
                             <div><strong>Price: </strong>${Number(e[i].price).toLocaleString('en-NG', { style: 'currency', currency: 'NGN' })}</div>
-                            <div><strong>Description: </strong><br>${e[i].description}<br>
+                            <div><strong>Description:</strong><br>${e[i].description}<br>
                             <button id="view-${e[i].id}" class='btn btn-outline-info view-btn'>View Gallery</button></div>
+                        </div>
                         </td>
                     </tr>`
                 )
@@ -80,15 +82,17 @@ $(document).ready(function(){
                 for(let i = 0; i < e.length; i++){
                     $('#tbody').append(
                         `<tr class='carlist'>
-                            <td><img src='image/cars/${e[i].image}.jpg' alt=''></td>
-                            <td>
+                            <td class="clearfix">
+                            <div class="carbox"><img src='image/cars/${e[i].image}.jpg' class="img-fluid" alt='${e[i].name} ${e[i].model} ${e[i].year} model'></div>
+                            <div>
                                 <div><strong>Brand: </strong>${e[i].name}</div>
                                 <div><strong>Model: </strong>${e[i].model}</div>
                                 <div><strong>Year: </strong>${e[i].year}</div>
                                 <div><strong>Condition: </strong>${e[i].condition}</div>
                                 <div><strong>Price: </strong>${Number(e[i].price).toLocaleString('en-NG', { style: 'currency', currency: 'NGN' })}</div>
-                                <div><strong>Description: </strong><br>${e[i].description}<br>
+                                <div><strong>Description:</strong><br>${e[i].description}<br>
                                 <button id="view-${e[i].id}" class='btn btn-outline-info view-btn'>View Gallery</button></div>
+                            </div>
                             </td>
                         </tr>`
                     )
@@ -127,15 +131,17 @@ $(document).ready(function(){
                 for(let i = 0; i < e.length; i++){
                     $('#tbody').append(
                         `<tr class='carlist'>
-                            <td><img src='image/cars/${e[i].image}.jpg' alt=''></td>
-                            <td>
+                            <td class="clearfix">
+                            <div class="carbox"><img src='image/cars/${e[i].image}.jpg' class="img-fluid" alt='${e[i].name} ${e[i].model} ${e[i].year} model'></div>
+                            <div>
                                 <div><strong>Brand: </strong>${e[i].name}</div>
                                 <div><strong>Model: </strong>${e[i].model}</div>
                                 <div><strong>Year: </strong>${e[i].year}</div>
                                 <div><strong>Condition: </strong>${e[i].condition}</div>
                                 <div><strong>Price: </strong>${Number(e[i].price).toLocaleString('en-NG', { style: 'currency', currency: 'NGN' })}</div>
-                                <div><strong>Description: </strong><br>${e[i].description}<br>
+                                <div><strong>Description:</strong><br>${e[i].description}<br>
                                 <button id="view-${e[i].id}" class='btn btn-outline-info view-btn'>View Gallery</button></div>
+                            </div>
                             </td>
                         </tr>`
                     )
@@ -169,7 +175,7 @@ $(document).ready(function(){
 
             $('#tbody').append(
                 `<tr id='nocars' class='carlist'>
-                    <td><img src='image/cars/noCar.jpg' alt='default car'></td>
+                    <td><img src='image/cars/noCar.jpg' class="img-fluid" alt='default car'></td>
                     <td>
                         <div id='divnocar'><strong>No car yet! </strong>Please create a car</div>
                     </td>

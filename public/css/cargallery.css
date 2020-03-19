@@ -24,13 +24,20 @@ body{
 
 #showroom{padding-top: 1.25em; margin: 0px;}
 #showroom .col-10{padding-left: 0px; padding-right: 0px;}
-#thumbPix{margin: 10px auto; width: 27.375em; height: 5.125em; background-color: rgba(6, 4, 5, 1); padding-top: 0.25em;}
-#thumbPix span{padding-left: 0.1875em;}
+#showroom .col-12{padding-left: 3px; padding-right: 3px;}
+#thumbPix{margin: 0.625em auto; width: 37%; height: 5.125em; background-color: #060405;padding-top: 5px; padding-left: 0.1875em;}
+#thumbPix span{margin-left: 0.1875em;}
 #thumbPix span img{border: #cccccc thin solid;}
 #thumbPix span img:hover{cursor: pointer; border: rgb(116, 116, 240) 0.0625em solid;}
 
 #tablerow{margin-right: 0px; margin-left: 0px;}
 .table tr{background-color: rgba(6, 4, 5, 1); color: rgba(255,255,255,.5);}
+.carbox{float: left; width: 50%; padding-right: 20px;}
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: table;
+}
 
 #foot{
     height: 6.25em; background-color: rgba(6, 4, 5, .9); color: #f5f5f5; text-align: center; 
@@ -45,3 +52,18 @@ body{
 #socialMedia{font-size: 2rem;list-style:none;}
 
 #socialMedia li{ display: inline; padding-left: 1.875em;}
+
+@media screen and (max-width: 767px){
+    #thumbPix{
+        width: 100%; padding: 0.1875em 0; margin: 1px;   
+    }
+    .carbox{width: 100%; padding-right: 0px;}
+
+    #foot{ margin-top: 3.25em;}
+
+    #foot .col-4, .col-8{padding-left: 0px; padding-right: 0px;}
+
+    #socialMedia li{padding-left: 0.6em;}
+
+    #foot .col-4 div{font-size: 0.75em;}
+}

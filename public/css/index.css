@@ -62,9 +62,9 @@ body{
 
 #socialMedia{font-size: 2rem;}
 
-@media screen and (max-width: 600px) {
-    #divpromise{
-        margin-top: 11.25em;
+@media screen and (max-width: 767px) {
+    #brand{
+        margin-bottom: 9.375em;
     }
 
     #rowround .col-12{padding-bottom: 0.625em;}
@@ -74,6 +74,8 @@ body{
     #foot .col-4, .col-8{padding-left: 0px; padding-right: 0px;}
 
     #foot ul li{padding-left: 0.6em;}
+
+    #foot .col-4 div{font-size: 0.75em;}
 }
 
 
