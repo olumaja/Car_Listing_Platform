@@ -18,7 +18,7 @@ $(document).ready(function(){
                     
                     if(e[i].status == 'unblock'){
                         
-                        btnBlock = '<i class="fas fa-ban"></i> Block User';
+                        btnBlock = 'Block User';
                     }
                     else{
                         btnBlock = 'Unblock User'
@@ -26,19 +26,19 @@ $(document).ready(function(){
 
                     $('#tbody').append(
                         `<tr id="tr-${e[i].id}">
-                            <td>${i}
-                            </td>
-                            
                             <td>
-                                ${e[i].name} 
-                            </td>
-                            <td>
-                                ${e[i].email} 
-                            </td>
-                            <td>
-                                <button id="view-${e[i].id}" class="btn btn-outline-info view-btn">View User's Cars</button>
-                                <button id="block-${e[i].id}" class="btn btn-primary block-btn">${btnBlock}</button>
-                                <button id="del-${e[i].id}" class="btn btn-danger del-btn"><i class="far fa-trash-alt"></i> Delete User</button>
+                                <div class='userInfo'>
+                                    <div>${i}</div>
+                                    <div class='nameCol'>${e[i].name}</div>
+                                    
+                                    <div class='infoCol'>${e[i].email}</div>
+                                        
+                                    <div class='infoCol'>
+                                        <button id="view-${e[i].id}" class="btn btn-outline-info btn-sm view-btn">View Cars</button>
+                                        <button id="block-${e[i].id}" class="btn btn-primary btn-sm block-btn">${btnBlock}</button>
+                                        <button id="del-${e[i].id}" class="btn btn-danger btn-sm del-btn">Delete User</button>
+                                    </div>
+                                </div>
                             </td>
                             
                                 

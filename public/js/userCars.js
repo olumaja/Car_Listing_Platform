@@ -21,17 +21,19 @@ $(document).ready(function(){
                 if(userId == Number(e[i].author_id)){
                     $('#tbody').append(
                         `<tr id="tr-${e[i].id}" class='carlist'>
-                            <td><img src='image/cars/${e[i].image}.jpg' alt=''></td>
-                            <td>
-                                <div><strong>Brand: </strong><span id='brands-${e[i].id}'>${e[i].name}</span></div>
-                                <div><strong>Model: </strong><span id='model-${e[i].id}'>${e[i].model}</span></div>
-                                <div><strong>Year: </strong><span id='years-${e[i].id}'>${e[i].year}</span></div>
-                                <div><strong>Condition: </strong><span id='condition-${e[i].id}'>${e[i].condition}</span></div>
-                                <div><strong>Price: </strong><span id='money-${e[i].id}'>${Number(e[i].price).toLocaleString('en-NG', { style: 'currency', currency: 'NGN' })}</span></div>
-                                <div><p><strong>Description: </strong><br><span id='describe-${e[i].id}'>${e[i].description}</span></p>
-                                <button id="view-${e[i].id}" class='btn btn-outline-info view-btn'>View Gallery</button>
-                                <button id="edit-${e[i].id}" class='btn btn-primary edit-btn'><i class="far fa-edit"></i> Edit Car</button>
-                                <button id="del-${e[i].id}" class='btn btn-danger del-btn'><i class="far fa-trash-alt"></i> Delete Car</button>
+                            <td class='clearfix'>
+                                <div class='carbox'><img src='image/cars/${e[i].image}.jpg' class="img-fluid" alt='${e[i].name} ${e[i].model} ${e[i].year} model'></div>
+                                <div>
+                                    <div><strong>Brand: </strong><span id='brands-${e[i].id}'>${e[i].name}</span></div>
+                                    <div><strong>Model: </strong><span id='model-${e[i].id}'>${e[i].model}</span></div>
+                                    <div><strong>Year: </strong><span id='years-${e[i].id}'>${e[i].year}</span></div>
+                                    <div><strong>Condition: </strong><span id='condition-${e[i].id}'>${e[i].condition}</span></div>
+                                    <div><strong>Price: </strong><span id='money-${e[i].id}'>${Number(e[i].price).toLocaleString('en-NG', { style: 'currency', currency: 'NGN' })}</span></div>
+                                    <div><p><strong>Description: </strong><br><span id='describe-${e[i].id}'>${e[i].description}</span></p>
+                                    <button id="view-${e[i].id}" class='btn btn-outline-info btn-sm view-btn'>View Gallery</button>
+                                    <button id="edit-${e[i].id}" class='btn btn-primary btn-sm edit-btn'><i class="far fa-edit"></i> Edit Car</button>
+                                    <button id="del-${e[i].id}" class='btn btn-danger btn-sm del-btn'><i class="far fa-trash-alt"></i> Delete Car</button>
+                                    </div>
                                 </div>
                             </td>
                         </tr>`
@@ -39,7 +41,6 @@ $(document).ready(function(){
 
                     noCar = false;
                     carCount++; //Counting the number of cars a user has
-                    console.log(carCount);
                 }
             }
 
@@ -62,11 +63,10 @@ $(document).ready(function(){
 
             })
 
-            //This is the edit button function for Post
+            //This is the edit button function for Get
             $('.edit-btn').on('click', (e) =>{
 
                 const editId = e.target.id.split('edit-').join('');
-
                 editCars(editId);
             })
 
@@ -111,17 +111,19 @@ $(document).ready(function(){
                 }).done((e)=>{
                     $('#tbody').append(
                         `<tr id="tr-${e.id}" class='carlist'>
-                            <td><img src='image/cars/${e.image}.jpg' alt=''></td>
-                            <td>
-                                <div><strong>Brand: </strong><span id='brands-${e.id}'>${e.name}</span></div>
-                                <div><strong>Model: </strong><span id='model-${e.id}'>${e.model}</span></div>
-                                <div><strong>Year: </strong><span id='years-${e.id}'>${e.year}</span></div>
-                                <div><strong>Condition: </strong><span id='condition-${e.id}'>${e.condition}</span></div>
-                                <div><strong>Price: </strong><span id='money-${e.id}'>${Number(e.price).toLocaleString('en-NG', { style: 'currency', currency: 'NGN' })}</span></div>
-                                <div><p><strong>Description: </strong><br><span id='describe-${e.id}'>${e.description}</span></p>
-                                <button id="view-${e.id}" class='btn btn-outline-info view-btn'>View Gallery</button>
-                                <button id="edit-${e.id}" class='btn btn-primary edit-btn'><i class="far fa-edit"></i> Edit Car</button>
-                                <button id="del-${e.id}" class='btn btn-danger del-btn'><i class="far fa-trash-alt"></i> Delete Car</button>
+                            <td class='clearfix'>
+                                <div class='carbox'><img src='image/cars/${e.image}.jpg' class="img-fluid" alt='${e.name} ${e.model} ${e.year} model'></div>
+                                <div>
+                                    <div><strong>Brand: </strong><span id='brands-${e.id}'>${e.name}</span></div>
+                                    <div><strong>Model: </strong><span id='model-${e.id}'>${e.model}</span></div>
+                                    <div><strong>Year: </strong><span id='years-${e.id}'>${e.year}</span></div>
+                                    <div><strong>Condition: </strong><span id='condition-${e.id}'>${e.condition}</span></div>
+                                    <div><strong>Price: </strong><span id='money-${e.id}'>${Number(e.price).toLocaleString('en-NG', { style: 'currency', currency: 'NGN' })}</span></div>
+                                    <div><p><strong>Description: </strong><br><span id='describe-${e.id}'>${e.description}</span></p>
+                                    <button id="view-${e.id}" class='btn btn-outline-info btn-sm view-btn'>View Gallery</button>
+                                    <button id="edit-${e.id}" class='btn btn-primary btn-sm edit-btn'><i class="far fa-edit"></i> Edit Car</button>
+                                    <button id="del-${e.id}" class='btn btn-danger btn-sm del-btn'><i class="far fa-trash-alt"></i> Delete Car</button>
+                                    </div>
                                 </div>
                             </td>
                         </tr>`
@@ -282,7 +284,7 @@ $(document).ready(function(){
 
                 $('#tbody').append(
                     `<tr id='nocars' class='carlist'>
-                        <td><img src='image/cars/noCar.jpg' alt='default car'></td>
+                        <td><img src='image/cars/noCar.jpg' class='img-fluid' alt='default car'></td>
                         <td>
                             <div id='divnocar'><strong>No car yet! </strong>Please create a car</div>
                         </td>

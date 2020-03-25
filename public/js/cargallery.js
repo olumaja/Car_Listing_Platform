@@ -23,14 +23,16 @@ else{
     //The codes below create table to display the current car and full details
             $('#tbody').append(
                 `<tr class='carlist'>
-                    <td><img src='image/cars/${onecar.image}.jpg' alt=''></td>
-                    <td>
-                        <div><strong>Brand: </strong>${onecar.name}</div>
-                        <div><strong>Model: </strong>${onecar.model}</div>
-                        <div><strong>Year: </strong>${onecar.year}</div>
-                        <div><strong>Condition: </strong>${onecar.condition}</div>
-                        <div><strong>Price: </strong>${Number(onecar.price).toLocaleString('en-NG', { style: 'currency', currency: 'NGN' })}</div>
-                        <div><strong>Description: </strong><br>${onecar.description}<br>
+                    <td class='clearfix'>
+                        <div class='carbox'><img src='image/cars/${onecar.image}.jpg' alt='' class="img-fluid"></div>
+                        <div>
+                            <div><strong>Brand: </strong>${onecar.name}</div>
+                            <div><strong>Model: </strong>${onecar.model}</div>
+                            <div><strong>Year: </strong>${onecar.year}</div>
+                            <div><strong>Condition: </strong>${onecar.condition}</div>
+                            <div><strong>Price: </strong>${Number(onecar.price).toLocaleString('en-NG', { style: 'currency', currency: 'NGN' })}</div>
+                            <div><strong>Description: </strong><br>${onecar.description}</div>
+                        </div>
                         
                     </td>
                 </tr>`

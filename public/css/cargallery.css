@@ -53,7 +53,7 @@ body{
 
 #socialMedia li{ display: inline; padding-left: 1.875em;}
 
-@media screen and (max-width: 767px){
+@media (max-width: 767px){
     #thumbPix{
         width: 100%; padding: 0.1875em 0; margin: 1px;   
     }

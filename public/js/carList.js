@@ -40,8 +40,9 @@ $(document).ready(function(){
             for(let i = 0; i < e.length; i++){
                 $('#tbody').append(
                     `<tr class='carlist'>
-                        <td><img src='image/cars/${e[i].image}.jpg' alt=''></td>
-                        <td>
+                        <td class='clearfix'>
+                        <div class="carbox"><img src='image/cars/${e[i].image}.jpg' class="img-fluid" alt='${e[i].name} ${e[i].model} ${e[i].year} model'></div>
+                        <div>
                             <div><strong>Brand: </strong>${e[i].name}</div>
                             <div><strong>Model: </strong>${e[i].model}</div>
                             <div><strong>Year: </strong>${e[i].year}</div>
@@ -49,6 +50,7 @@ $(document).ready(function(){
                             <div><strong>Price: </strong>${Number(e[i].price).toLocaleString('en-NG', { style: 'currency', currency: 'NGN' })}</div>
                             <div><strong>Description: </strong><br>${e[i].description}<br>
                             <button id="view-${e[i].id}" class='btn btn-outline-info view-btn'>View Gallery</button></div>
+                        </div>
                         </td>
                     </tr>`
                 )
@@ -98,15 +100,17 @@ $(document).ready(function(){
                 }).done((e)=>{
                     $('#tbody').append(
                         `<tr class='carlist'>
-                            <td><img src='image/cars/${e.image}.jpg' alt=''></td>
-                            <td>
-                                <div><strong>Brand: </strong>${e.name}</div>
-                                <div><strong>Model: </strong>${e.model}</div>
-                                <div><strong>Year: </strong>${e.year}</div>
-                                <div><strong>Condition: </strong>${e.condition}</div>
-                                <div><strong>Price: </strong>${Number(e.price).toLocaleString('en-NG', { style: 'currency', currency: 'NGN' })}</div>
-                                <div><strong>Description: </strong><br>${e.description}</div>
-                                <button id="view-${e.id}" class='btn btn-outline-info view-btn'>View Gallery</button></div>
+                            <td class='clearfix'>
+                                <div class='carbox'><img src='image/cars/${e.image}.jpg' class="img-fluid" alt='${e.name} ${e.model} ${e.year} model'></div>
+                                <div>
+                                    <div><strong>Brand: </strong>${e.name}</div>
+                                    <div><strong>Model: </strong>${e.model}</div>
+                                    <div><strong>Year: </strong>${e.year}</div>
+                                    <div><strong>Condition: </strong>${e.condition}</div>
+                                    <div><strong>Price: </strong>${Number(e.price).toLocaleString('en-NG', { style: 'currency', currency: 'NGN' })}</div>
+                                    <div><strong>Description: </strong><br>${e.description}</div>
+                                    <button id="view-${e.id}" class='btn btn-outline-info view-btn'>View Gallery</button></div>
+                                </div>
                             </td>
                         </tr>`
                     )
@@ -159,15 +163,17 @@ $(document).ready(function(){
                 for(let i = 0; i < e.length; i++){
                     $('#tbody').append(
                         `<tr class='carlist'>
-                            <td><img src='image/cars/${e[i].image}.jpg' alt=''></td>
-                            <td>
-                                <div><strong>Brand: </strong>${e[i].name}</div>
-                                <div><strong>Model: </strong>${e[i].model}</div>
-                                <div><strong>Year: </strong>${e[i].year}</div>
-                                <div><strong>Condition: </strong>${e[i].condition}</div>
-                                <div><strong>Price: </strong>${Number(e[i].price).toLocaleString('en-NG', { style: 'currency', currency: 'NGN' })}</div>
-                                <div><strong>Description: </strong><br>${e[i].description}<br>
-                                <button id="view-${e[i].id}" class='btn btn-outline-info view-btn'>View Gallery</button></div>
+                            <td class='clearfix'>
+                                <div class='carbox'><img src='image/cars/${e[i].image}.jpg' class="img-fluid" alt='${e[i].name} ${e[i].model} ${e[i].year} model'></div>
+                                <div>
+                                    <div><strong>Brand: </strong>${e[i].name}</div>
+                                    <div><strong>Model: </strong>${e[i].model}</div>
+                                    <div><strong>Year: </strong>${e[i].year}</div>
+                                    <div><strong>Condition: </strong>${e[i].condition}</div>
+                                    <div><strong>Price: </strong>${Number(e[i].price).toLocaleString('en-NG', { style: 'currency', currency: 'NGN' })}</div>
+                                    <div><strong>Description: </strong><br>${e[i].description}<br>
+                                    <button id="view-${e[i].id}" class='btn btn-outline-info view-btn'>View Gallery</button></div>
+                                </div>
                             </td>
                         </tr>`
                     )
@@ -206,15 +212,17 @@ $(document).ready(function(){
                 for(let i = 0; i < e.length; i++){
                     $('#tbody').append(
                         `<tr class='carlist'>
-                            <td><img src='image/cars/${e[i].image}.jpg' alt=''></td>
-                            <td>
-                                <div><strong>Brand: </strong>${e[i].name}</div>
-                                <div><strong>Model: </strong>${e[i].model}</div>
-                                <div><strong>Year: </strong>${e[i].year}</div>
-                                <div><strong>Condition: </strong>${e[i].condition}</div>
-                                <div><strong>Price: </strong>${Number(e[i].price).toLocaleString('en-NG', { style: 'currency', currency: 'NGN' })}</div>
-                                <div><strong>Description: </strong><br>${e[i].description}<br>
-                                <button id="view-${e[i].id}" class='btn btn-outline-info view-btn'>View Gallery</button></div>
+                            <td class='clearfix'>
+                                <div class='carbox'><img src='image/cars/${e[i].image}.jpg' class="img-fluid" alt='${e[i].name} ${e[i].model} ${e[i].year} model'></div>
+                                <div>
+                                    <div><strong>Brand: </strong>${e[i].name}</div>
+                                    <div><strong>Model: </strong>${e[i].model}</div>
+                                    <div><strong>Year: </strong>${e[i].year}</div>
+                                    <div><strong>Condition: </strong>${e[i].condition}</div>
+                                    <div><strong>Price: </strong>${Number(e[i].price).toLocaleString('en-NG', { style: 'currency', currency: 'NGN' })}</div>
+                                    <div><strong>Description: </strong><br>${e[i].description}<br>
+                                    <button id="view-${e[i].id}" class='btn btn-outline-info view-btn'>View Gallery</button></div>
+                                </div>
                             </td>
                         </tr>`
                     )

@@ -62,7 +62,7 @@ body{
 
 #socialMedia{font-size: 2rem;}
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
     #brand{
         margin-bottom: 9.375em;
     }

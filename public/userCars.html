@@ -14,6 +14,7 @@
         if(sessionStorage.getItem('person') === null){window.location.href = 'http://localhost:3000/logIn.html'}
     </script>
     <title>List Of Cars</title>
+    <link rel="icon" type="image/ico" href="image/test.ico" />
 
     <style>
       
@@ -101,21 +102,21 @@
               </div>
 
               <div id="banner" class="row">
-                <div class="col-1"></div>
-                <div class="col-10">
+                <div class="col-md-1"></div>
+                <div class="col-12 col-md-10">
                     <div>
-                        <img src="image/cars/banner.jpg" alt="Banner" class="img-fluid" style="width: 100%;" >
+                        <img src="image/cars/banner.jpg" alt="Banner" class="img-fluid" >
                       </div>
                 </div>
-                <div class="col-1"></div>
+                <div class="col-md-1"></div>
               </div>
 
               
 
               <div id="car-row" class="row">
 
-                <div class="col-1"></div>
-                <div id="sideMenu" class="col-2">
+                <div class="col-md-1"></div>
+                <div id="sideMenu" class="col-4 col-md-2">
                   <button id="user-menu" type="button" class="btn btn-block"><i class="far fa-minus-square"></i>  <span>User Menu</span></button>
                   <nav id="divlist">
                     <ul>
@@ -125,7 +126,7 @@
                     </ul>
                   </nav>
                 </div>
-                <div class="col-8">
+                <div class="col-8 col-md-8">
                     <div>
 
                         <table class="table">
@@ -137,7 +138,7 @@
 
                     </div>
                 </div>
-                <div class="col-1"></div>
+                <div class="col-md-1"></div>
 
               </div>
 
@@ -262,7 +263,7 @@
                               </button>
                             </div>
                             <div id="deletebody" class="modal-body">
-                                <div><img  id="deletePix" src="" alt=""></div>
+                                <div><img  id="deletePix" src="" alt="" class="img-fluid"></div>
                               <p id="deleteMsg"></p>
                             </div>
                             <div class="modal-footer">
@@ -276,11 +277,11 @@
               <footer id="foot">
 
                 <div class="row">
-                    <div class="col-1"></div>
-                    <div class="col-4">
+                    <div class="col-md-1"></div>
+                    <div class="col-4 col-md-4">
                         <div>Copyright &copy; 2019. All right reserved.</div>
                     </div>
-                       <div class="col-6 offset-col-1">
+                       <div class="col-8 col-md-6">
                           <ul id="socialMedia">
                               <li><a href="http://www.facebook.com"><i class="fab fa-facebook" title="Facebook" data-toggle="tooltip" data-placement="top"></i></a></li>
                               <li><a href="http://www.plus.google.com"><i class="fab fa-google-plus" title="Google+" data-toggle="tooltip" data-placement="top"></i></a></li>

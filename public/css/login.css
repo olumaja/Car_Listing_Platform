@@ -63,6 +63,6 @@ body{
 
 #socialMedia li{ display: inline; padding-left: 1.875em;}
 
-@media screen and (max-width: 767px){
+@media (max-width: 767px){
     .terms{font-size: 0.75em;}
 }

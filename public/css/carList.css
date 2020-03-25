@@ -37,11 +37,20 @@ body{
     clear: both;
     display: table;
 }
+
+
+.userInfo{
+    display: flex; flex-wrap: wrap;
+}
+
+.infoCol{flex: 40%; padding-left: 20px; max-width: 40%;}
+.nameCol{flex: 15%; padding-left: 20px; max-width: 15%;}
+
 #paging{text-align: center;}
 #paging button{margin-left: 0.625em;}
 
 
-#contentModal{width: 37.5em; text-align: center;}
+#contentModal{width: 100%; text-align: center;}
 
 #carModal{ background-color: rgba(6, 4, 5, .9);}
 #wrong{display: none;}
@@ -69,9 +78,9 @@ body{
 #backrow{margin-top: 1.25em; margin-right: 0px; margin-left: 0px;}
 #smallpix{margin-top: 1.25em; margin-right: 0px; margin-left: 0px;}
 
-#divnocar{margin-top:4.375em; font-size: 1.875em}
+#divnocar{margin-top:4.375em; font-size: 1.875em; text-align: center;}
 
-@media screen and (max-width: 767px){
+@media (max-width: 767px){
     
 
     #foot{ margin-top: 3.25em;}
@@ -81,5 +90,16 @@ body{
     #socialMedia li{padding-left: 0.6em;}
 
     #foot .col-4 div{font-size: 0.75em;}
+
     .carbox{width: 100%; padding-right: 0px;}
+
+    .carlist .tdCar{padding: 0.75rem 0.125em}
+
+    #adminMenu{font-size: 14px;}
+    .btn-sm{margin-top: 5px !important;}
+
+    .nameCol{flex: 100%; max-width: 80%;}
+    .infoCol{flex: 100%; max-width: 100%; padding: 0;}
+
+    #banner .col-12{padding: 0 5px}
 }

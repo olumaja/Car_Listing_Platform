@@ -28,7 +28,7 @@ $(document).ready(function(){
                                 <div><strong>Year: </strong>${onecar.year}</div>
                                 <div><strong>Condition: </strong>${onecar.condition}</div>
                                 <div><strong>Price: </strong>${Number(onecar.price).toLocaleString('en-NG', { style: 'currency', currency: 'NGN' })}</div>
-                                <div><strong>Description: </strong><br>${onecar.description}<br>
+                                <div><strong>Description: </strong><br>${onecar.description}</div>
                             </div>
                         </td>
                     </tr>`
